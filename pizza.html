@@ -16,24 +16,32 @@
 
         <form id="pizza">
 
-          <h3>Size:</h3>
-          <label><input type="radio" name="size" value="1"> Small $8</label><br>
-          <label><input type="radio" name="size" value="2"> Medium $10</label><br>
-          <label><input type="radio" name="size" value="3"> Large $12</label><br>
 
+          <h3>Size:</h3>
+          <div class="pick_size">
+            <label><input type="radio" name="size" value="1"> Small $8</label><br>
+            <label><input type="radio" name="size" value="2"> Medium $10</label><br>
+            <label><input type="radio" name="size" value="3"> Large $12</label><br>
+          </div>
+
+          <div class="pick_meat">
           <h3>Meat</h3>
-          <label><input type="radio" name="meat" value="1"> Pepperoni</label><br>
-          <label><input type="radio" name="meat" value="2"> Sausage</label><br>
-          <label><input type="radio" name="meat" value="3"> Ham</label><br>
+            <label><input type="radio" name="meat" value="1"> Pepperoni</label><br>
+            <label><input type="radio" name="meat" value="2"> Sausage</label><br>
+            <label><input type="radio" name="meat" value="3"> Ham</label><br>
+          </div>
+
 
           <h3>Toppings - $.50 each</h3>
-          <label><input type="checkbox" name="topping" value="1"> Green Peppers</label><br>
-          <label><input type="checkbox" name="topping" value="2"> Onions</label><br>
-          <label><input type="checkbox" name="topping" value="3"> Mushrooms</label><br>
-          <label><input type="checkbox" name="topping" value="4"> Artichoke Hearts</label><br>
-          <label><input type="checkbox" name="topping" value="5"> Pineapple</label><br>
-          <label><input type="checkbox" name="topping" value="6"> bacon</label><br>
-          <br>
+          <div class="pick_topping"
+            <label><input type="checkbox" name="topping" value="1"> Green Peppers</label><br>
+            <label><input type="checkbox" name="topping" value="2"> Onions</label><br>
+            <label><input type="checkbox" name="topping" value="3"> Mushrooms</label><br>
+            <label><input type="checkbox" name="topping" value="4"> Artichoke Hearts</label><br>
+            <label><input type="checkbox" name="topping" value="5"> Pineapple</label><br>
+            <label><input type="checkbox" name="topping" value="6"> Bacon</label><br>
+          </div>
+            <br>
 
           <button type="submit" class="btn">Order</button>
 
