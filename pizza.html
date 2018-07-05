@@ -5,28 +5,39 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.3.1.js"></script>
     <script src="js/scripts.js"></script>
-    <title>Let's Order a Pizza!</title>
+    <title>Pizza!</title>
   </head>
   <body>
 
     <div class="container">
       <div class="jumbotron">
-      <h1>Let's Order a Pizza</h1>
+      <h1>Let's Order a Pizza!</h1>
       </div>
 
         <form id="pizza">
 
           <h3>Size:</h3>
-          <label><input type="radio" name="size" value="small"> Small</label><br>
-          <label><input type="radio" name="size" value="medium"> Medium</label><br>
-          <label><input type="radio" name="size" value="large"> Large</label><br>
+          <label><input type="radio" name="size" value="1"> Small $8</label><br>
+          <label><input type="radio" name="size" value="2"> Medium $10</label><br>
+          <label><input type="radio" name="size" value="3"> Large $12</label><br>
 
-          <h3>Meat Toppings</h3>
-          <label><input type="radio" name="meat" value="pepperoni"> Pepperoni</label><br>
-          <label><input type="radio" name="meat" value="sausage"> Sausage</label><br>
-          <label><input type="radio" name="meat" value="ham"> Ham</label><br>
+          <h3>Meat</h3>
+          <label><input type="radio" name="meat" value="1"> Pepperoni</label><br>
+          <label><input type="radio" name="meat" value="2"> Sausage</label><br>
+          <label><input type="radio" name="meat" value="3"> Ham</label><br>
 
-          
+          <h3>Toppings - $.50 each</h3>
+          <label><input type="checkbox" name="topping" value="1"> Green Peppers</label><br>
+          <label><input type="checkbox" name="topping" value="2"> Onions</label><br>
+          <label><input type="checkbox" name="topping" value="3"> Mushrooms</label><br>
+          <label><input type="checkbox" name="topping" value="4"> Artichoke Hearts</label><br>
+          <label><input type="checkbox" name="topping" value="5"> Pineapple</label><br>
+          <label><input type="checkbox" name="topping" value="6"> bacon</label><br>
+          <br>
+
+          <button type="submit" class="btn">Order</button>
+
+
 
 
 
