@@ -43,13 +43,13 @@ $(document).ready(function() {
   $("#pizza-form").submit(function(event) {
     event.preventDefault();
     //form inputs
-    var size = $("input:checkbox[name=size]:checked").map(function)(); {
+    var size = $("input[name=size]:checked").val(); {
       return this.value;
     }).get();
-    var meat = $("input:checkbox[name=meat]:checked").map(function(); {
+    var meat = $("input[name=meat]:checked").val(); {
       return this.value;
     }).get();
-    var topping = $("input:checkbox[name=topping]:checked").map(function() {
+    var topping = $("input[name=topping]:checked")..val() {
       return this.value;
     }).get();
 
@@ -59,7 +59,7 @@ $(document).ready(function() {
     //display as list
     $("#final_pizza").append("<li><span class="pizza">" + thePizza.pizzaDescription() + "<span></li>");
     //reset to default
-    document.getElementById("order-form").reset();
+    document.getElementById("pizza-form").reset();
 
     $(".pizza").last().click(function() {
       $("#final_details").show();
