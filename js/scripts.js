@@ -35,3 +35,38 @@ var displayPizzaInfo = function() {
   $("#meat").text(thePizza.meat.join(", "));
   $("#topping").text(thePizza.topping.join(", "));
 }
+
+
+//UI Logic
+
+$(document).ready(function() {
+  $("#pizza-form").submit(function(event) {
+    event.preventDefault();
+    //form inputs
+    var size = $("input:checkbox[name=size]:checked").map(function)(); {
+      return this.value;
+    }).get();
+    var meat = $("input:checkbox[name=meat]:checked").map(function(); {
+      return this.value;
+    }).get();
+    var topping = $("input:checkbox[name=topping]:checked").map(function() {
+      return this.value;
+    }).get();
+
+    var thePizza = new Pizza(size, meat, topping);
+    //calculate price from input by user
+    thePizza.calculatePrice();
+    //display as list
+    $("#final_pizza").append("<li><span class="pizza">" + thePizza.pizzaDescription() + "<span></li>");
+    //reset to default
+    document.getElementById("order-form").reset();
+
+    $(".pizza").last().click(function() {
+      $("#final_details").show();
+      $("#final_details h5").text(thePizza.pizzaDescription());
+      $("#meat").text(thePizza.meat.join(", "));
+      $("#topping").text(thePizza.topping.join(", "));
+    });
+  });
+
+});
