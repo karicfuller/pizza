@@ -6,6 +6,6 @@
 
 .btn {
   background-color: pink;
-  border: black;
+  font-weight: bold;
   font-size: 15px
 }
