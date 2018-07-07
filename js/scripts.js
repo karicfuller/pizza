@@ -8,7 +8,7 @@ function Pizza(size, meat, topping) {
 }
 
 Pizza.prototype.calculatePrice = function() {
-  this.price = 8; //size small price
+  this.price = 8; //base - size small price
   if (this.size === "medium") {
     this.price += 2;
   } else if (this.size === "large") {
@@ -26,14 +26,7 @@ Pizza.prototype.calculatePrice = function() {
 }
 
 Pizza.prototype.pizzaDescription = function() {
-  return "You have ordered a " + this.size + " " + this.meat + this.topping "pizza: $" + this.price;
-}
-
-var displayPizzaInfo = function() {
-  $("#final_details").show();
-  $("#final_details h5").text(thePizza.pizzaDescription());
-  $("#meat").text(thePizza.meat.join(", "));
-  $("#topping").text(thePizza.topping.join(", "));
+  alert "You have ordered a " + this.size + " " + this.meat + this.topping "pizza for $" + this.price;
 }
 
 
@@ -45,27 +38,21 @@ $(document).ready(function() {
     //form inputs
     var size = $("input[name=size]:checked").val(); {
       return this.value;
-    }).get();
+    })
     var meat = $("input[name=meat]:checked").val(); {
       return this.value;
-    }).get();
-    var topping = $("input[name=topping]:checked")..val() {
+    })
+    var topping = $("input[name=topping]:checked").val() {
       return this.value;
-    }).get();
+    })
 
     var thePizza = new Pizza(size, meat, topping);
     //calculate price from input by user
     thePizza.calculatePrice();
-    //display as list
-    $("#final_pizza").append("<li><span class="pizza">" + thePizza.pizzaDescription() + "<span></li>");
-    //reset to default
-    document.getElementById("pizza-form").reset();
 
-    $(".pizza").last().click(function() {
-      $("#final_details").show();
-      $("#final_details h5").text(thePizza.pizzaDescription());
-      $("#meat").text(thePizza.meat.join(", "));
-      $("#topping").text(thePizza.topping.join(", "));
+    //reset to default
+    //document.getElementById("pizza-form").reset();
+
     });
   });
 
