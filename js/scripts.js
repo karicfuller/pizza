@@ -33,15 +33,12 @@ $(document).ready(function() {
   $("#pizza-form").submit(function(event) {
     event.preventDefault();
     //form inputs
-    var size = $("input:radio[name=size]:checked").val(); {
-      return this.price;
-    }
-    var meat = $("input:checkbox[name=meat]:checked").val(); {
-      return this.price;
-    }
-    var topping = $("input:checkbox[name=topping]:checked").val() {
-      return this.price;
-    }
+    var size = $("input:radio[name=size]:checked").val();
+
+
+    var meat = $("input:checkbox[name=meat]:checked").val();
+
+    var topping = $("input:checkbox[name=topping]:checked").val();
 
     var thePizza = new Pizza(size, meat, topping);
     //calculate price from input by user
@@ -49,7 +46,7 @@ $(document).ready(function() {
     $("#show-price").text(thePizza.price);
     $("#final-price").show();
 
-    //document.getElementById("pizza-form").reset();
-  //});
+    document.getElementById("pizza-form").reset();
+  });
 
 });
