@@ -1,6 +1,6 @@
 //Business Logic
 
-function Pizza(size, meat, topping, price) {
+function Pizza(size, meat, topping) {
   this.size = size;
   this.meat = meat;
   this.topping = topping;
@@ -8,13 +8,13 @@ function Pizza(size, meat, topping, price) {
 }
 
 Pizza.prototype.calculatePrice = function() {
-  if (this.size === "Small") {
+  if (this.size === "small") {
     this.price = this.price + 8;
   }
-  else if (this.size === "Medium") {
+  else if (this.size === "medium") {
     this.price= this.price + 10;
   }
-  else if (this.size === "Large") {
+  else if (this.size === "large") {
     this.price = this.price + 12;
   }
   //price of meat
@@ -53,8 +53,6 @@ $(document).ready(function() {
     $("#final-price").show();
 
     document.getElementById("pizza-form").reset();
-  });
-
   });
 
 });
