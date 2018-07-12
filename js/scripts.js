@@ -35,8 +35,11 @@ $(document).ready(function() {
     //form inputs
     var size = $("input:radio[name=size]:checked").val();
 
+    var meat = [];
+    $.each($("input[name='meat']:checked"), function(){
+        meat.push($(this).val());
+    });
 
-    var meat = $("input:checkbox[name=meat]:checked").val();
 
     var topping = $("input:checkbox[name=topping]:checked").val();
 
