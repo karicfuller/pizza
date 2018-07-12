@@ -47,7 +47,7 @@ $(document).ready(function() {
     //calculate price from input by user
     thePizza.calculatePrice();
     $("#show-price").text(thePizza.price);
-    $("#results").show();
+    $("#final-price").show();
 
     //document.getElementById("pizza-form").reset();
   //});
